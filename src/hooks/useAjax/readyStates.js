@@ -1,0 +1,7 @@
+export const
+    READYSTATE = 'readyState',
+    STATUSCODE = 'STATUSCODE',
+    UNINITIALIZED = 'UNINITIALIZED',
+    LOADING = 'LOADING',
+    LOADED = 'LOADED',
+    ERROR = 'ERROR';

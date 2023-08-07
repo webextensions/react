@@ -1,3 +1,18 @@
+# Generated directories
+/components/
+/hooks/
+
+# Root level "node_modules" directory
+/node_modules/
+
+# Output of 'npm pack'
+*.tgz
+
+# Ignore extracted output directory of `$ npm pack`. eg: "/owner-package-1.0.0/" extracted from "/owner-package-1.0.0.tgz"
+/*-*.*.*/
+
+## Generic ignored files
+
 # Logs
 logs
 *.log
@@ -65,9 +80,6 @@ web_modules/
 
 # Optional REPL history
 .node_repl_history
-
-# Output of 'npm pack'
-*.tgz
 
 # Yarn Integrity file
 .yarn-integrity

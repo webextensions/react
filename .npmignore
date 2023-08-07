@@ -1,0 +1,5 @@
+# Output of `$ npm pack`
+/*.tgz
+
+# Ignore extracted output directory of `$ npm pack`. eg: "/owner-package-1.0.0/" extracted from "/owner-package-1.0.0.tgz"
+/*-*.*.*/
