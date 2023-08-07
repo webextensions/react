@@ -1,14 +1,11 @@
 {
     "name": "@webextensions/react",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "React based Components and Hooks",
-
     "engines": {
         "node": ">=16"
     },
-
     "type": "module",
-
     "scripts": {
         "install-without-peerDependencies": "npm install --omit=peer",
         "clean:quick": "rm -rf components && rm -rf hooks",
