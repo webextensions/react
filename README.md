@@ -27,3 +27,8 @@ import { Loading, LoadingTriggeredAfterDelay } from '@webextensions/react/compon
 ```js
 import { useAjax } from '@webextensions/react/hooks/useAjax/useAjax.js';
 ```
+
+### useLocalStorage
+```js
+import { useLocalStorage } from '@webextensions/react/hooks/useLocalStorage/useLocalStorage.js';
+```
