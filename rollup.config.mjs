@@ -105,6 +105,10 @@ const rollupConfig = [
     configGenerator({
         input:     'src/hooks/useAjax/useAjax.js',
         output: { dir: 'hooks/useAjax/' }
+    }),
+    configGenerator({
+        input:     'src/hooks/useLocalStorage/useLocalStorage.js',
+        output: { dir: 'hooks/useLocalStorage/' }
     })
 ];
 
