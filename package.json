@@ -11,15 +11,14 @@
         "clean:quick": "rm -rf components && rm -rf hooks",
         "clean:full": " npm run clean:quick && npm run install-without-peerDependencies",
         "clean": "      npm run clean:quick",
-        "build": "      npm run clean && rollup -c",
-        "start": "      npm run build",
+        "start:build": "npm run clean      && rollup -c",
         "start:debug": "npm run clean:full && rollup -c",
+        "start": "      npm run start:build",
+        "version": "    npm run start:build",
         "lint": "    eslint . --ext .cjs,.js,.mjs,.ts,.tsx --report-unused-disable-directives",
         "lint:fix": "eslint . --ext .cjs,.js,.mjs,.ts,.tsx --report-unused-disable-directives --fix",
         "test": "npm run lint",
-        "postinstall": "./scripts/postinstall.sh",
-        "prepack": "npm run build",
-        "postversion": "git push --follow-tags"
+        "postinstall": "./scripts/postinstall.sh"
     },
     "devDependencies": {
         "@babel/core": "^7.22.10",
