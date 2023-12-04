@@ -91,6 +91,10 @@ const configGenerator = function ({
 
 const rollupConfig = [
     configGenerator({
+        input:     'src/components/AfterDelay/AfterDelay.js',
+        output: { dir: 'components/AfterDelay/' }
+    }),
+    configGenerator({
         input:     'src/components/ClickToShow/ClickToShow.js',
         output: { dir: 'components/ClickToShow/' }
     }),
