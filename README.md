@@ -5,6 +5,11 @@ React based Components and Hooks
 
 ## Components
 
+### AfterDelay
+```js
+import { AfterDelay } from '@webextensions/react/components/AfterDelay/AfterDelay.js';
+```
+
 ### ClickToShow
 ```js
 import { ClickToShow } from '@webextensions/react/components/ClickToShow/ClickToShow.js';
@@ -18,7 +23,7 @@ import { CopyIcon } from '@webextensions/react/components/CopyIcon/CopyIcon.js';
 ### Loading
 ```js
 import '@webextensions/react/components/Loading/Loading.css';
-import { Loading, LoadingTriggeredAfterDelay } from '@webextensions/react/components/Loading/Loading.js';
+import { Loading } from '@webextensions/react/components/Loading/Loading.js';
 ```
 
 ## Hooks
