@@ -23,7 +23,7 @@ const CopyIcon = function ({ data }) {
             onClick={() => {
                 copy(data);
             }}
-            fontSize='inherit'
+            fontSize="inherit"
         />
     );
 };
