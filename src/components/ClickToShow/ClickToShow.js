@@ -43,7 +43,15 @@ const ClickToShow = function (props) {
             const defaultHideText = 'Hide';
             const hideTextToShow = props.clickToHideText || defaultHideText;
 
-            if (props.type === 'button') {
+            if (props.type === 'custom') {
+                clickToHide = (
+                    <div className="ClickToHide" onClick={hide} style={{ display: 'inline-block', cursor: 'pointer' }}>
+                        <div style={props.clickToShowHideTextStyle}>
+                            {props.CustomHideComponent}
+                        </div>
+                    </div>
+                );
+            } else if (props.type === 'button') {
                 clickToHide = (
                     <button className="ClickToHide" onClick={hide} style={{ cursor: 'pointer' }}>
                         <span style={props.clickToShowHideTextStyle}>
@@ -97,25 +105,27 @@ const ClickToShow = function (props) {
         const defaultClickToShowText = 'Show';
         const clickToShowText = props.clickToShowText || defaultClickToShowText;
 
-        if (props.type === 'button') {
+        if (props.type === 'custom') {
             return (
-                <React.Fragment>
-                    <button className="ClickToShow" onClick={reveal} style={{ cursor: 'pointer' }}>
-                        <span style={props.clickToShowHideTextStyle}>
-                            {clickToShowText}
-                        </span>
-                    </button>
-                </React.Fragment>
+                <div className="ClickToShow" onClick={reveal} style={{ display: 'inline-block', cursor: 'pointer' }}>
+                    {props.CustomShowComponent}
+                </div>
+            );
+        } else if (props.type === 'button') {
+            return (
+                <button className="ClickToShow" onClick={reveal} style={{ cursor: 'pointer' }}>
+                    <span style={props.clickToShowHideTextStyle}>
+                        {clickToShowText}
+                    </span>
+                </button>
             );
         } else {
             return (
-                <React.Fragment>
-                    <span className="ClickToShow" onClick={reveal} style={{ cursor: 'pointer' }}>
-                        <span style={props.clickToShowHideTextStyle}>
-                            {clickToShowText}
-                        </span>
+                <span className="ClickToShow" onClick={reveal} style={{ cursor: 'pointer' }}>
+                    <span style={props.clickToShowHideTextStyle}>
+                        {clickToShowText}
                     </span>
-                </React.Fragment>
+                </span>
             );
         }
     }
@@ -127,6 +137,8 @@ ClickToShow.propTypes = {
         PropTypes.node
     ]).isRequired,
     type: PropTypes.string,
+    CustomShowComponent: PropTypes.element,
+    CustomHideComponent: PropTypes.element,
     showOnly: PropTypes.bool,
     showByDefault: PropTypes.bool,
     clickToShowText: PropTypes.string,
