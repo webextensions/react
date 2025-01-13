@@ -37,3 +37,8 @@ import { useAjax } from '@webextensions/react/hooks/useAjax/useAjax.js';
 ```js
 import { useLocalStorage } from '@webextensions/react/hooks/useLocalStorage/useLocalStorage.js';
 ```
+
+### useMinHeight
+```js
+import { useMinHeight } from '@webextensions/react/hooks/useMinHeight/useMinHeight.js';
+```

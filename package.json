@@ -52,7 +52,8 @@
         "react": "*",
         "react-dom": "*",
         "react-scroll-into-view-if-needed": "*",
-        "react-use": "*"
+        "react-use": "*",
+        "throttle-debounce": "*"
     },
     "repository": {
         "type": "git",

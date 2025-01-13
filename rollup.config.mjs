@@ -113,6 +113,10 @@ const rollupConfig = [
     configGenerator({
         input:     'src/hooks/useLocalStorage/useLocalStorage.js',
         output: { dir: 'hooks/useLocalStorage/' }
+    }),
+    configGenerator({
+        input:     'src/hooks/useMinHeight/useMinHeight.js',
+        output: { dir: 'hooks/useMinHeight/' }
     })
 ];
 
