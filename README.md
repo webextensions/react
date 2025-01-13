@@ -42,3 +42,13 @@ import { useLocalStorage } from '@webextensions/react/hooks/useLocalStorage/useL
 ```js
 import { useMinHeight } from '@webextensions/react/hooks/useMinHeight/useMinHeight.js';
 ```
+
+# For Developers
+Steps to publish:
+```sh
+$ npm run install-without-peerDependencies
+$ npm start
+$ npm install
+$ npm test
+$ npx --prefer-offline np
+```
