@@ -46,9 +46,10 @@ import { useMinHeight } from '@webextensions/react/hooks/useMinHeight/useMinHeig
 # For Developers
 Steps to publish:
 ```sh
-$ npm run install-without-peerDependencies
-$ npm start
 $ npm install
 $ npm test
-$ npx --prefer-offline np
+$ npm run install-without-peerDependencies
+$ npm start
+$ npm version <patch/minor/major/...>
+$ npm publish
 ```
