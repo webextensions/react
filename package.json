@@ -1,6 +1,6 @@
 {
     "name": "@webextensions/react",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "description": "React based Components and Hooks",
     "engines": {
         "node": ">=18"
