@@ -11,7 +11,7 @@ const copy = async function (simpleText) {
     try {
         await navigator.clipboard.writeText(simpleText);
         return true;
-    } catch (e) {
+    } catch (e) { // eslint-disable-line no-unused-vars
         return false;
     }
 };

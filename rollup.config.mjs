@@ -1,5 +1,3 @@
-/* eslint-disable filenames/match-exported */
-
 import commonjs from '@rollup/plugin-commonjs';
 import { babel } from '@rollup/plugin-babel';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
@@ -69,14 +67,12 @@ const configGenerator = function ({
 
         // Alternatively, try a library like https://www.npmjs.com/package/rollup-plugin-peer-deps-external
         external: [
-            '@mui/base',
             '@mui/icons-material',
-            '@mui/material',
             'prop-types',
             'react',
-            'react-dom',
             'react-scroll-into-view-if-needed',
-            'react-use'
+            'react-use',
+            'throttle-debounce'
         ]
 
         // // https://github.com/TanStack/query/issues/5175#issuecomment-1482196558

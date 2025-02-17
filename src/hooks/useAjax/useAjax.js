@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react';
 
 import {
-    READYSTATE,
-    STATUSCODE,
     UNINITIALIZED,
     LOADING,
     LOADED,
@@ -67,12 +65,13 @@ const useAjax = function ({ ajaxCall, refreshedAt, autoTrigger = false, debug = 
     ];
 };
 
+export { useAjax };
+
 export {
-    useAjax,
     READYSTATE,
     STATUSCODE,
     UNINITIALIZED,
     LOADING,
     LOADED,
     ERROR
-};
+} from './readyStates.js';

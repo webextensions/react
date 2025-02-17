@@ -1,9 +1,0 @@
-# http://eslint.org/docs/user-guide/configuring.html#ignoring-files-and-directories
-
-# node_modules ignored by default
-
-/components/
-/hooks/
-
-# Ignore extracted output directory of `$ npm pack`. eg: "/owner-package-1.0.0/" extracted from "/owner-package-1.0.0.tgz"
-/*-*.*.*/
