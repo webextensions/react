@@ -13,7 +13,7 @@ const useAjax = function ({ ajaxCall, refreshedAt, autoTrigger = false, debug = 
         data: null
     });
 
-    const triggerAjax = async (...args) => {
+    const triggerAjaxAsync = async (...args) => {
         if (debug) {
             debugger; // eslint-disable-line no-debugger
         }
@@ -52,14 +52,14 @@ const useAjax = function ({ ajaxCall, refreshedAt, autoTrigger = false, debug = 
         }
 
         if (autoTrigger) {
-            triggerAjax(); // eslint-disable-line react-hooks/set-state-in-effect
+            triggerAjaxAsync(); // eslint-disable-line react-hooks/set-state-in-effect
         }
     }, [refreshedAt, autoTrigger]); // eslint-disable-line react-hooks/exhaustive-deps
 
     return [
         ajaxStatus,
         {
-            triggerAjax,
+            triggerAjaxAsync,
             resetStatus
         }
     ];
