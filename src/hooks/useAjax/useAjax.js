@@ -52,7 +52,7 @@ const useAjax = function ({ ajaxCall, refreshedAt, autoTrigger = false, debug = 
         }
 
         if (autoTrigger) {
-            triggerAjax();
+            triggerAjax(); // eslint-disable-line react-hooks/set-state-in-effect
         }
     }, [refreshedAt, autoTrigger]); // eslint-disable-line react-hooks/exhaustive-deps
 

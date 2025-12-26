@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 // Note:
 //     Using it in the following way will cause some other complications (like package would contain many other dependencies)
@@ -27,8 +26,8 @@ const CopyIcon = function ({ data }) {
         />
     );
 };
-CopyIcon.propTypes = {
-    data: PropTypes.string.isRequired
-};
+// CopyIcon.propTypes = {
+//     data: PropTypes.string.isRequired
+// };
 
 export { CopyIcon };

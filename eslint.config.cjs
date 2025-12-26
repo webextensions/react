@@ -6,7 +6,9 @@
 // Reference:
 //     https://github.com/webextensions/eslint-config-ironplate/blob/master/index.js
 
-const eslintIronPlateConfigNode = require('eslint-config-ironplate/node.js');
+const globals = require('globals');
+
+const eslintIronPlateConfigNode = require('eslint-config-ironplate/node.js').default;
 
 module.exports = [
     {
@@ -29,11 +31,21 @@ module.exports = [
     ...eslintIronPlateConfigNode,
 
     {
+        languageOptions: {
+            globals: {
+                ...globals.browser
+            }
+        }
+    },
+
+    {
         files: [
             '**/*.cjs',
+            '**/*.cts',
             '**/*.js',
             '**/*.jsx',
             '**/*.mjs',
+            '**/*.mts',
             '**/*.ts',
             '**/*.tsx'
         ],

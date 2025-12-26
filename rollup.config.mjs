@@ -68,7 +68,6 @@ const configGenerator = function ({
         // Alternatively, try a library like https://www.npmjs.com/package/rollup-plugin-peer-deps-external
         external: [
             '@mui/icons-material',
-            'prop-types',
             'react',
             'react-scroll-into-view-if-needed',
             'react-use',

@@ -1,5 +1,3 @@
-/* eslint-env node */
-
 // https://babeljs.io/docs/en/babel-preset-env
 const presets = [
     [

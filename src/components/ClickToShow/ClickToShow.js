@@ -1,6 +1,5 @@
 import React from 'react';
 import { useSetState } from 'react-use';
-import PropTypes from 'prop-types';
 
 import ReactScrollIntoViewIfNeeded from 'react-scroll-into-view-if-needed';
 
@@ -130,25 +129,24 @@ const ClickToShow = function (props) {
         }
     }
 };
-
-ClickToShow.propTypes = {
-    children: PropTypes.oneOfType([
-        PropTypes.arrayOf(PropTypes.node),
-        PropTypes.node
-    ]).isRequired,
-    type: PropTypes.string,
-    CustomShowComponent: PropTypes.element,
-    CustomHideComponent: PropTypes.element,
-    showOnly: PropTypes.bool,
-    showByDefault: PropTypes.bool,
-    clickToShowText: PropTypes.string,
-    clickToHideText: PropTypes.string,
-    clickToShowHideTextStyle: PropTypes.object,
-    contentLocation: PropTypes.string,
-    onShow: PropTypes.func,
-    onHide: PropTypes.func,
-    onToggle: PropTypes.func,
-    scrollIntoView: PropTypes.bool
-};
+// ClickToShow.propTypes = {
+//     children: PropTypes.oneOfType([
+//         PropTypes.arrayOf(PropTypes.node),
+//         PropTypes.node
+//     ]).isRequired,
+//     type: PropTypes.string,
+//     CustomShowComponent: PropTypes.element,
+//     CustomHideComponent: PropTypes.element,
+//     showOnly: PropTypes.bool,
+//     showByDefault: PropTypes.bool,
+//     clickToShowText: PropTypes.string,
+//     clickToHideText: PropTypes.string,
+//     clickToShowHideTextStyle: PropTypes.object,
+//     contentLocation: PropTypes.string,
+//     onShow: PropTypes.func,
+//     onHide: PropTypes.func,
+//     onToggle: PropTypes.func,
+//     scrollIntoView: PropTypes.bool
+// };
 
 export { ClickToShow };

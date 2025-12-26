@@ -27,7 +27,7 @@ function useLocalStorage(key, initialValue) {
         try {
             // Allow value to be a function so we have same API as useState
             const valueToStore =
-                value instanceof Function ? value(storedValue) : value;
+                value instanceof Function ? value(storedValue) : value; // eslint-disable-line unicorn/no-instanceof-builtins
             // Save state
             setStoredValue(valueToStore);
             // Save to local storage

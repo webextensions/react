@@ -6,17 +6,29 @@
 // Reference:
 //     https://github.com/webextensions/eslint-config-ironplate/blob/master/index.js
 
-const eslintConfigIronPlateReact = require('eslint-config-ironplate/react.js');
+const globals = require('globals');
+
+const eslintConfigIronPlateReact = require('eslint-config-ironplate/react.js').default;
 
 module.exports = [
     ...eslintConfigIronPlateReact,
 
     {
+        languageOptions: {
+            globals: {
+                ...globals.browser
+            }
+        }
+    },
+
+    {
         files: [
             '**/*.cjs',
+            '**/*.cts',
             '**/*.js',
             '**/*.jsx',
             '**/*.mjs',
+            '**/*.mts',
             '**/*.ts',
             '**/*.tsx'
         ],
@@ -29,6 +41,10 @@ module.exports = [
         // Add ESLint rules here. If they are stable and useful, move those as a pull
         // request to https://github.com/webextensions/eslint-config-ironplate/
         rules: {
+            /* Begin: Temporarily turning off some rules */
+            'jsx-a11y/click-events-have-key-events': 'off',
+            'jsx-a11y/no-static-element-interactions': 'off'
+            /* End: Temporarily turning off some rules */
         }
     }
 ];

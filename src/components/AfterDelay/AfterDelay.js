@@ -1,5 +1,4 @@
 import React, { Fragment, useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
 
 const AfterDelay = function ({ children, delay }) {
     const [showChildren, setShowChildren] = useState(false);
@@ -17,9 +16,9 @@ const AfterDelay = function ({ children, delay }) {
         return null;
     }
 };
-AfterDelay.propTypes = {
-    children: PropTypes.node,
-    delay: PropTypes.number
-};
+// AfterDelay.propTypes = {
+//     children: PropTypes.node,
+//     delay: PropTypes.number
+// };
 
 export { AfterDelay };
