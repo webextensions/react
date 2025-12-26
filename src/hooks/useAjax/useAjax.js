@@ -7,7 +7,7 @@ import {
     ERROR
 } from './readyStates.js';
 
-const useAjax = function ({ ajaxCall, refreshedAt, autoTrigger = false, debug = false }) {
+const useAjax = function ({ ajaxCallAsync, refreshedAt, autoTrigger = false, debug = false }) {
     const [ajaxStatus, setAjaxStatus] = useState({
         readyState: UNINITIALIZED,
         data: null
@@ -22,21 +22,21 @@ const useAjax = function ({ ajaxCall, refreshedAt, autoTrigger = false, debug = 
             readyState: LOADING,
             data: null
         });
-        const [err, dataFromAjaxCall] = await ajaxCall(...args);
+        const [err, dataFromAjaxCallAsync] = await ajaxCallAsync(...args);
         if (err) {
             console.log(err);
             setAjaxStatus({
                 readyState: ERROR,
-                data: dataFromAjaxCall,
+                data: dataFromAjaxCallAsync,
                 errorData: err
             });
         } else {
             setAjaxStatus({
                 readyState: LOADED,
-                data: dataFromAjaxCall
+                data: dataFromAjaxCallAsync
             });
         }
-        return [err, dataFromAjaxCall];
+        return [err, dataFromAjaxCallAsync];
     };
 
     const resetStatus = () => {
